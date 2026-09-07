@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a120f">
+  <meta name="description" content="Arcane Survivors — a fast fantasy browser game of magic and monsters.">
+  <title>Arcane Survivors — Magic & Monsters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game" aria-label="Arcane Survivors game"></canvas>
+
+  <section id="hud" aria-label="Game stats">
+    <div class="brand">✦ ARCANE SURVIVORS</div>
+    <div class="tagline">MAGIC • MONSTERS • SURVIVAL</div>
+
+    <div class="stat-row"><span>❤️ Vitality</span><strong id="hp">100</strong></div>
+    <div class="bar"><div id="hpbar" class="bar-fill health"></div></div>
+
+    <div class="stat-row"><span>🔷 Mana</span><strong id="mana">100</strong></div>
+    <div class="bar"><div id="manabar" class="bar-fill mana"></div></div>
+
+    <div class="stat-row"><span>⭐ Level</span><strong>Level <span id="level">1</span> · <span id="xp">0</span> XP</strong></div>
+    <div class="bar xp"><div id="xpbar" class="bar-fill xp-fill"></div></div>
+
+    <div class="mini-stats">
+      <span>☠ <b id="kills">0</b> defeated</span>
+      <span>👹 <b id="enemies">0</b> nearby</span>
+      <span>🏆 <b id="score">0</b></span>
+    </div>
+  </section>
+
+  <section id="spellbook" aria-label="Spells">
+    <div class="spell-title">ARCANE SPELLS</div>
+    <div class="spell"><kbd>1</kbd><span><b>Fireball</b><small>12 mana • rapid cast</small></span></div>
+    <div class="spell"><kbd>2</kbd><span><b>Arcane Nova</b><small>35 mana • area blast</small></span></div>
+    <div class="spell"><kbd>3</kbd><span><b>Blink</b><small>25 mana • teleport</small></span></div>
+    <div class="spell"><kbd>4</kbd><span><b>Frost Bolt</b><small>18 mana • slow target</small></span></div>
+    <div class="spell"><kbd>5</kbd><span><b>Chain Lightning</b><small>30 mana • hits 3+ enemies</small></span></div>
+    <div class="spell"><kbd>6</kbd><span><b>Meteor</b><small>45 mana • massive area blast</small></span></div>
+    <div class="spell"><kbd>7</kbd><span><b>Arcane Ward</b><small>28 mana • block damage</small></span></div>
+  </section>
+
+  <div id="help">WASD / Arrows Move &nbsp; • &nbsp; Shift Sprint &nbsp; • &nbsp; Mouse Aim &nbsp; • &nbsp; Click / 1 Fireball &nbsp; • &nbsp; 2 Nova &nbsp; • &nbsp; 3 Blink &nbsp; • &nbsp; 4 Frost &nbsp; • &nbsp; 5 Lightning &nbsp; • &nbsp; 6 Meteor &nbsp; • &nbsp; 7 Ward &nbsp; • &nbsp; P Pause</div>
+
+  <div id="banner"></div>
+
+  <div id="overlay">
+    <div class="overlay-card">
+      <div class="overlay-kicker">THE END OF THE TALE</div>
+      <h1 id="overlayTitle">YOU HAVE FALLEN</h1>
+      <p id="overlayText"></p>
+      <div id="restartHint" class="restart">Press R to rise again</div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
