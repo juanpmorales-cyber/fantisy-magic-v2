@@ -1,67 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a120f">
-  <meta name="description" content="Arcane Survivors — fantasy magic survival game.">
-  <title>Arcane Survivors — Version 3</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09110d">
+<meta name="description" content="Arcane Survivors V4 — fantasy magic survival game.">
+<title>Arcane Survivors — V4</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <canvas id="game" aria-label="Arcane Survivors game"></canvas>
-
-<section id="hud" aria-label="Game stats">
-  <div class="brand">✦ ARCANE SURVIVORS V3</div>
-  <div class="tagline">MAGIC • MONSTERS • BOSSES</div>
-  <div class="stat-row"><span>❤️ Vitality</span><strong id="hp">100</strong></div>
-  <div class="bar"><div id="hpbar" class="bar-fill health"></div></div>
-  <div class="stat-row"><span>🔷 Mana</span><strong id="mana">100</strong></div>
-  <div class="bar"><div id="manabar" class="bar-fill mana"></div></div>
-  <div class="stat-row"><span>⭐ Level</span><strong>Level <span id="level">1</span> · <span id="xp">0</span> XP</strong></div>
-  <div class="bar xp"><div id="xpbar" class="bar-fill xp-fill"></div></div>
-  <div class="mini-stats">
-    <span>☠ <b id="kills">0</b> defeated</span>
-    <span>👹 <b id="enemies">0</b> nearby</span>
-    <span>🏆 <b id="score">0</b></span>
-  </div>
+<section id="hud">
+  <div class="brand">✦ ARCANE SURVIVORS V4</div>
+  <div class="tagline">15 SPELLS • 5 MONSTERS • BOSS BATTLES</div>
+  <div class="stat-row"><span>❤️ Vitality</span><strong id="hp">100</strong></div><div class="bar"><div id="hpbar" class="bar-fill health"></div></div>
+  <div class="stat-row"><span>🔷 Mana</span><strong id="mana">100</strong></div><div class="bar"><div id="manabar" class="bar-fill mana"></div></div>
+  <div class="stat-row"><span>⭐ Level</span><strong>Level <span id="level">1</span> · <span id="xp">0</span> XP</strong></div><div class="bar xp"><div id="xpbar" class="bar-fill xp-fill"></div></div>
+  <div class="mini-stats"><span>☠ <b id="kills">0</b> defeated</span><span>👹 <b id="enemies">0</b> nearby</span><span>🏆 <b id="score">0</b></span></div>
   <div class="selected">✨ Selected: <b id="selectedSpell">1: Fireball</b></div>
 </section>
 
 <section id="spellbook" aria-label="Spells">
-  <div class="spell-title">ARCANE SPELLS — 15</div>
-  <div class="spell"><kbd>1</kbd><span><b>Fireball</b><small>Rapid ranged damage</small></span></div>
-  <div class="spell"><kbd>2</kbd><span><b>Arcane Nova</b><small>Area blast</small></span></div>
-  <div class="spell"><kbd>3</kbd><span><b>Blink</b><small>Teleport</small></span></div>
-  <div class="spell"><kbd>4</kbd><span><b>Frost Bolt</b><small>Damage + slow</small></span></div>
-  <div class="spell"><kbd>5</kbd><span><b>Chain Lightning</b><small>Multi-target</small></span></div>
-  <div class="spell"><kbd>6</kbd><span><b>Meteor</b><small>Huge area blast</small></span></div>
-  <div class="spell"><kbd>7</kbd><span><b>Arcane Ward</b><small>Block damage</small></span></div>
-  <div class="spell"><kbd>8</kbd><span><b>Flame Wave</b><small>Burn nearby enemies</small></span></div>
-  <div class="spell"><kbd>9</kbd><span><b>Blizzard</b><small>Freeze an area</small></span></div>
-  <div class="spell"><kbd>0</kbd><span><b>Thunder Storm</b><small>Repeated lightning</small></span></div>
-  <div class="spell"><kbd>Q</kbd><span><b>Void Orb</b><small>Heavy projectile</small></span></div>
-  <div class="spell"><kbd>E</kbd><span><b>Comet</b><small>Massive impact</small></span></div>
-  <div class="spell"><kbd>F</kbd><span><b>Healing</b><small>Restore vitality</small></span></div>
-  <div class="spell"><kbd>G</kbd><span><b>Tornado</b><small>Knock enemies back</small></span></div>
-  <div class="spell"><kbd>H</kbd><span><b>Apocalypse</b><small>Ultimate attack</small></span></div>
+  <div class="spell-title">ARCANE SPELLBOOK — 15</div>
+  <div class="spell"><kbd>1</kbd><span><b>Fireball</b><small>Exploding flame shot</small></span></div>
+  <div class="spell"><kbd>2</kbd><span><b>Arcane Nova</b><small>Purple shockwave</small></span></div>
+  <div class="spell"><kbd>3</kbd><span><b>Blink</b><small>Teleport + afterimages</small></span></div>
+  <div class="spell"><kbd>4</kbd><span><b>Frost Bolt</b><small>Crystal + freeze</small></span></div>
+  <div class="spell"><kbd>5</kbd><span><b>Chain Lightning</b><small>Visible chained bolts</small></span></div>
+  <div class="spell"><kbd>6</kbd><span><b>Meteor</b><small>Falling impact crater</small></span></div>
+  <div class="spell"><kbd>7</kbd><span><b>Arcane Ward</b><small>Magic shield</small></span></div>
+  <div class="spell"><kbd>8</kbd><span><b>Flame Wave</b><small>Burning cone</small></span></div>
+  <div class="spell"><kbd>9</kbd><span><b>Blizzard</b><small>Snowstorm + slow</small></span></div>
+  <div class="spell"><kbd>0</kbd><span><b>Thunder Storm</b><small>Random lightning strikes</small></span></div>
+  <div class="spell"><kbd>Q</kbd><span><b>Void Orb</b><small>Gravity + heavy damage</small></span></div>
+  <div class="spell"><kbd>E</kbd><span><b>Comet</b><small>Fast cosmic missile</small></span></div>
+  <div class="spell"><kbd>F</kbd><span><b>Healing</b><small>Restore health</small></span></div>
+  <div class="spell"><kbd>G</kbd><span><b>Tornado</b><small>Pulls + lifts enemies</small></span></div>
+  <div class="spell"><kbd>H</kbd><span><b>Apocalypse</b><small>Screen-wide ultimate</small></span></div>
 </section>
 
-<div id="bossUI">
-  <div class="boss-name">👑 BOSS</div>
-  <div class="boss-track"><div id="bossbar"></div></div>
-</div>
-
-<div id="help">WASD / Arrows Move • Shift Sprint • Mouse Aim • Left Click Fireball • 1-9, 0, Q, E, F, G, H Spells • P Pause</div>
+<div id="bossUI"><div class="boss-name">👑 BOSS</div><div class="boss-track"><div id="bossbar"></div></div></div>
+<div id="help">WASD / Arrows Move • Shift Sprint • Mouse Aim • Click casts selected spell • 1-9, 0, Q, E, F, G, H Cast • P Pause • R Restart</div>
 <div id="banner"></div>
-<div id="overlay">
-  <div class="overlay-card">
-    <div class="overlay-kicker">THE END OF THE TALE</div>
-    <h1 id="overlayTitle">YOU HAVE FALLEN</h1>
-    <p id="overlayText"></p>
-    <div id="restartHint" class="restart">Press R to rise again</div>
-  </div>
-</div>
+<div id="overlay"><div class="overlay-card"><div class="overlay-kicker">THE END OF THE TALE</div><h1 id="overlayTitle">YOU HAVE FALLEN</h1><p id="overlayText"></p><div id="restartHint" class="restart">Press R to rise again</div></div></div>
 <script src="game.js"></script>
 </body>
 </html>
