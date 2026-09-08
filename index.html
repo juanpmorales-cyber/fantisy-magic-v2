@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#09110d">
-<meta name="description" content="Arcane Survivors V4 — fantasy magic survival game.">
-<title>Arcane Survivors — V4</title>
+<meta name="description" content="Arcane Survivors V5 — 3D fantasy magic survival game.">
+<title>Arcane Survivors — V5 3D</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <canvas id="game" aria-label="Arcane Survivors game"></canvas>
 <section id="hud">
-  <div class="brand">✦ ARCANE SURVIVORS V4</div>
-  <div class="tagline">15 SPELLS • 5 MONSTERS • BOSS BATTLES</div>
+  <div class="brand">✦ ARCANE SURVIVORS V5 • 3D</div>
+  <div class="tagline">3D REALM • 15 SPELLS • 5 MONSTERS • BOSS BATTLES</div>
   <div class="stat-row"><span>❤️ Vitality</span><strong id="hp">100</strong></div><div class="bar"><div id="hpbar" class="bar-fill health"></div></div>
   <div class="stat-row"><span>🔷 Mana</span><strong id="mana">100</strong></div><div class="bar"><div id="manabar" class="bar-fill mana"></div></div>
   <div class="stat-row"><span>⭐ Level</span><strong>Level <span id="level">1</span> · <span id="xp">0</span> XP</strong></div><div class="bar xp"><div id="xpbar" class="bar-fill xp-fill"></div></div>
@@ -43,6 +43,7 @@
 <div id="help">WASD / Arrows Move • Shift Sprint • Mouse Aim • Click casts selected spell • 1-9, 0, Q, E, F, G, H Cast • P Pause • R Restart</div>
 <div id="banner"></div>
 <div id="overlay"><div class="overlay-card"><div class="overlay-kicker">THE END OF THE TALE</div><h1 id="overlayTitle">YOU HAVE FALLEN</h1><p id="overlayText"></p><div id="restartHint" class="restart">Press R to rise again</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script src="game.js"></script>
 </body>
 </html>
